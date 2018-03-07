@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.162" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uit.ai.controller.tuyetController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu fx:id="mFile" mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem fx:id="miNew" mnemonicParsing="false" onAction="#newAction" text="New" />
+            <MenuItem fx:id="miOpen" mnemonicParsing="false" onAction="#startOpen" text="Open…" />
+            <MenuItem fx:id="miSave" mnemonicParsing="false" onAction="#SaveAction" text="Save" />
+            <MenuItem fx:id="miExit" mnemonicParsing="false" onAction="#ExitAction" text="Exit" />
+          </items>
+        </Menu>
+        <Menu fx:id="mEdit" mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem fx:id="miCut" mnemonicParsing="false" onAction="#Cut" text="Cut" />
+            <MenuItem fx:id="miCopy" mnemonicParsing="false" onAction="#Copy" text="Copy" />
+            <MenuItem fx:id="miPaste" mnemonicParsing="false" onAction="#Paste" text="Paste" />
+            <MenuItem fx:id="miDelete" mnemonicParsing="false" onAction="#Delete" text="Delete" />
+          </items>
+        </Menu>
+        <Menu fx:id="mFormat" mnemonicParsing="false" text="Format">
+          <items>
+                  <CheckMenuItem fx:id="cmiWordWrap" mnemonicParsing="false" text="Word Wrap" />
+                  <MenuItem fx:id="miFont" mnemonicParsing="false" onAction="#startWordWrap" text="Font..." />
+          </items>
+        </Menu>
+            <Menu fx:id="mView" mnemonicParsing="false" text="View">
+               <items>
+                  <CheckMenuItem fx:id="cmStatusBar" mnemonicParsing="false" text="Status Bar" />
+               </items>
+            </Menu>
+            <Menu fx:id="mHelp" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="miViewHelp" mnemonicParsing="false" text="View Help" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="miAboutNotepad" mnemonicParsing="false" text="About Notepad" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TextArea fx:id="tArea" layoutY="2.0" prefHeight="375.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font></TextArea>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
